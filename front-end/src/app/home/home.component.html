@@ -1,0 +1,293 @@
+
+<!-- home.component.html -->
+
+<!--<app-header></app-header> -->
+<!-- <app-header></app-header>-->
+<!-- <router-outlet></router-outlet> -->
+
+<!-- <app-footer></app-footer>-->
+
+<div id="arrow">
+    <i class="fa fa-arrow-up"></i>
+  </div>
+  <nav>
+    <div class="container">
+      <div class="menu-par">
+        <div class="logo-par">
+          <a href="/home">
+            <h2>Team Adventures</h2>
+          </a>
+        </div>
+        <div class="nav">
+          <ul>
+            <li><a class="menu-hover" href="/home/">Home</a></li>
+            <li><a class="menu-hover" href="/home/#welcome-text">Travel</a></li>
+            <li><a class="menu-hover" href="/home/#book">Book Now</a></li>
+            <li><a class="menu-hover" href="/home/#gallery">Gallery</a></li>
+            <li><a class="menu-hover" href="/home/#water-slider">Holiday</a></li>
+            <li><a class="menu-hover" href="/home/#blog">Events</a></li>
+          </ul>
+        </div>
+        <div id="toggle-btn">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <header>
+    <div class="container">
+      <div class="header-info-par">
+        <h1 class="typewrite" data-period="2000"
+            data-type='["Happiness is closer than you think","Adventure Awaits, go find it.","Dont be a tourist, be a traveler."]'>
+        </h1>
+        <p>Discover breathtaking destinations, immerse in diverse cultures, and create unforgettable memories
+             with our expert travel guides and tips</p>
+        <a href="/home/#book" class="a">Read More</a>
+      </div>
+      <div class="video">
+        <video id="video" autoplay loop muted>
+          <source src="assets/videos/travel-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Other sections... --><!-- Second Slides Section -->
+    <section id="welcome-text">
+        <div class="container">
+            <h2 id="t1">The Official Travel Site for adventerous countries
+
+            </h2>
+            
+            <p>Where will your next adventure take you?</p>
+        </div>
+    </section>
+    <!-- Slides Section Start-->
+    <section id="slides-par">
+        <div class="container">
+            <div class="slides">
+                <div class="slide_1 slide_2">
+                    <div class="slide-info">
+                        <p>Singapore</p>
+                        <p><a href="/../assets/html/singapore.html">Click Here</a></p>
+
+                    </div>
+                </div>
+                <div class="slide_1 slide_3">
+                    <div class="slide-info">
+                        <p>Andaman And Nicobar Islands</p>
+                        <p><a href="/../assets/html/andaman.html">Click Here</a></p>
+
+                    </div>
+                </div>
+                <div class="slide_1 slide_4">
+                    <div class="slide-info">
+                        <p>Dubai</p>
+                        <p><a href="/../assets/html/dubai.html">Click Here</a></p>
+
+                    </div>
+                </div>
+                <div class="slide_1 slide_6">
+                    <div class="slide-info">
+                        <p>Bangkok</p>
+                        <p><a href="/../assets/html/bangkok.html">Click Here</a></p>
+
+                    </div>
+                </div>
+                <div class="slide_1 slide_7">
+                    <div class="slide-info">
+                        <p>Italy</p>
+                        <p><a href="/../assets/html/italy.html">Click Here</a></p>
+
+                    </div>
+                </div>
+                <div class="slide_1 slide_8">
+                    <div class="slide-info">
+                        <p>Malasiya</p>
+                        <p><a href="/../assets/html/malaysia.html">Click Here</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Slides Section Start-->
+  <!-- Book Now Section Start -->
+  <section id="book">
+    <div class="container">
+      <app-book-now></app-book-now>
+    </div>
+  </section>
+  <!-- Book Now Section End -->
+  
+   <!-- Gallery Section Starts -->
+   <section id="gallery">
+    <div class="container">
+        <div class="row">
+            <div align="center" class="filter-btn-par">
+                <h3 id="t3">Gallery</h3>
+                <button class="filter-button" data-filter="all">ALL</button>
+                <button class="filter-button" data-filter="diving">DIVING</button>
+                <button class="filter-button" data-filter="nature">NATURE</button>
+                <button class="filter-button" data-filter="dining">Hotels</button>
+            </div>
+            <div class="filter-gal-par">
+                <div class="gallery-item filter diving">
+                    <img src="/../assets/images/fiji-surprise/diving1.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="gallery-item filter diving">
+                    <img src="/../assets/images/fiji-surprise/diving2.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="gallery-item filter diving">
+                    <img src="/../assets/images/fiji-surprise/diving3.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="gallery-item filter dining">
+                    <img src="/../assets/images/fiji-surprise/dining1.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="gallery-item filter dining">
+                    <img src="/../assets/images/fiji-surprise/dining2.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="gallery-item filter nature">
+                    <img src="/../assets/images/fiji-surprise/nature1.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="gallery-item filter nature">
+                    <img src="/../assets/images/fiji-surprise/nature2.jpg" alt="" class="img-responsive">
+                </div>
+                <div class="gallery-item filter nature">
+                    <img src="/../assets/images/fiji-surprise/nature3.jpg" alt="" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Gallery Section Ends -->
+ 
+    <!-- Mutiple Slider Section Starts [autoSlide]="true"
+     -->
+	 <section id="water-slider">
+            <h3 id="t4">Start Planning Your Dream Holiday</h3>
+     <app-water-slider [images]="images" [autoSlide]=true ></app-water-slider>
+	         
+    </section>
+     <!--
+    <section id="water-slider">
+        <div class="container">
+            <h3 id="t4">Start Planning Your Dream Holiday</h3>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="owl-img-par">
+                        <img src="/../assets/images/slider/bangkok.jpg" alt="" class="img-responsive" height="250" width="500" />
+                        <div class="owl-img-info">
+                            <h3>Bangkok</h3>
+                            <p>THAILAND</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="owl-img-par">
+                        <img src="/../assets/images/slider/Rome.jpg" alt="" class="img-responsive" height="250" width="500"/>
+                        <div class="owl-img-info">
+                            <h3>Rome</h3>
+                            <p>ITALY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="owl-img-par">
+                        <img src="/../assets/images/recipe_slides/recipe3.jpg" alt="" class="img-responsive"height="250" width="500" />  
+                        <div class="owl-img-info">
+                            <h3>Malacca</h3>
+                            <p>Malaysia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="owl-img-par">
+                        <img src="/../assets/images/slider/dubai.jpg" alt="" class="img-responsive" height="250" width="500"/>
+                        <div class="owl-img-info">
+                            <h3>Dubai</h3>
+                            <p>EMIRATES</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="owl-img-par">
+                        <img src="/../assets/images/recipe_slides/recipe1.jpg" alt="" class="img-responsive" height="250" width="500"/> 
+                        <div class="owl-img-info">
+                            <h3>Jurong</h3>
+                            <p>Singapore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Blog Section Starts -->
+    <section id="blog">
+        <div class="container">
+            <h3 id="t5">News And Events</h3>
+            <div class="blog-par">
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="/../assets/images/events/events1.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <h4></h4>
+                        <p></p>
+
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="/../assets/images/events/events2.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <h4></h4>
+                        <p></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="blog-par">
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="/../assets/images/events/events3.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <h4></h4>
+                        <p></p>
+
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <!-- one div for image and one for info -->
+                    <div class="blog-img-par">
+                        <img src="/../assets/images/events/events4.jpg" alt="" class="img-responsive">
+
+                    </div>
+                    <div class="blog-info-par">
+                        <h4></h4>
+                        <p></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mutiple Slider Section Ends -->
+
+  <!-- Other sections... -->
+  
+  <footer>
+    <p class="copyright">Copyright © 2024 Created By Team Adventures</p>
+  </footer>
+  
+ 

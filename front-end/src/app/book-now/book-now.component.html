@@ -1,0 +1,123 @@
+ <!-- Book Now Section Start -->
+ <!--
+ <section id="book">
+  <div class="container">
+      <div class="book-content-par">
+          <div class="book-counter">
+              <h3 id="t2">Book Now</h3>
+              <div id="clockdiv">
+                  <div>
+                      <span class="days"></span>
+                      <div class="smalltext">Days</div>
+
+                  </div>
+                  <div>
+                      <span class="hours"></span>
+                      <div class="smalltext">Hours</div>
+
+                  </div>
+                  <div>
+                      <span class="minutes"></span>
+                      <div class="smalltext">Minutes</div>
+
+                  </div>
+                  <div>
+                      <span class="seconds"></span>
+                      <div class="smalltext">Seconds</div>
+
+                  </div>
+              </div>
+          </div>
+          <div class="book-form">
+              <form>
+                  <input type="text" id="fname" name="firstname" placeholder="First Name...">
+                  <input type="text" id="lname" name="lastname" placeholder="Last Name...">
+                  <select name="country" id="country">
+                      <option value="20000">Singapore</option>
+                      <option value="10000">Andaman</option>
+                      <option value="30000">Dubai</option>
+                      <option value="25000">Bangkok</option>
+                      <option value="100000">Italy</option>
+                      <option value="50000">Malaysia</option>
+                  </select>
+                  <input type="text" id="email" name="email" placeholder="email">
+                  <input type="text" id="phno" name="PhoneNumber" placeholder="PhoneNumber">
+                  <input type="text" id="payment" name="payment" placeholder="Payment" readonly>
+                  <input type="submit" value="Submit">
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+-->
+<!-- Book Now Section End -->
+
+
+<div class="container">
+  <div class="book-content-par">
+    <div class="book-counter">
+      <h3 id="t2">Book Now</h3>
+
+
+      <app-timer></app-timer>
+      <!--
+      <div id="clockdiv">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">{{Days}}</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">{{Hours}}</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">{{Minutes}}</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">{{Seconds}}</div>
+        </div>
+      </div>
+      -->
+    </div>
+
+    <div class="book-form">
+      <form (ngSubmit)="bookNow()">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter First Name..." required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}" class="form-control" id="stname" placeholder="Enter Last Name..." required>
+        </div>
+        <div class="form-group">
+          <label>Country</label>
+          <select [(ngModel)]="country" [ngModelOptions]="{standalone: true}" id="country" class="form-control" (change)="updatePayment()" required>
+            <option value="" disabled selected>Select a Country...</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Andaman">Andaman</option>
+            <option value="Dubai">Dubai</option>
+            <option value="Bangkok">Bangkok</option>
+            <option value="Italy">Italy</option>
+            <option value="Malaysia">Malaysia</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" id="course" placeholder="Enter Name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="text" [(ngModel)]="phoneNumber" [ngModelOptions]="{standalone: true}" class="form-control" id="phone" placeholder="Enter Phone Number..." required>
+        </div>
+        <div class="form-group">
+          <label>Payment</label>
+          <input type="text" [(ngModel)]="payment" [ngModelOptions]="{standalone: true}" class="form-control" id="payment" placeholder="Payment" readonly>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4"  >Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
